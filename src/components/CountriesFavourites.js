@@ -1,13 +1,13 @@
 import React from 'react'
+import { emoji } from '../util'
 
 const CountriesFavourites = ({favouriteCountries}) => {
-    console.log("This the array of favourite countries",favouriteCountries[0])
+    // console.log("This the array of favourite countries",favouriteCountries[0])
 
 
     const favouriteOptions = favouriteCountries.map((favouriteCountry,index) => {
-        const name = favouriteCountries.name
-        console.log("name of country" , favouriteCountries)
-        return<p value={index} key={index}   >hello  there{name} </p>
+        console.log("name of country" , favouriteCountry.name)
+        return<p value={index} key={index}   >{favouriteCountry.name} {emoji(favouriteCountry.alpha2Code)}</p>
 
     })
 

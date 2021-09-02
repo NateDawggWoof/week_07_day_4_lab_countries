@@ -12,13 +12,13 @@ const CounrtyDetails = ({country, handleAddFavourite}) => {
                 <p>Region: {country.region}</p>
            
             <span>
-            <p> Flag:</p><img src={url} id="flag" width="128" height="128"/>
+            <p> Flag:</p><img src={url} id="flag" width="128" height="170"/>
             </span>
             
             
         </div>
         <div>
-            <button value={country} onClick={handleAddFavourite}>Add To Favourites</button>
+            <button onClick={handleAddFavourite}>Add To Favourites</button>
             
         </div>
         </>

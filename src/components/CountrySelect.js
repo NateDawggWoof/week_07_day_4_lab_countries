@@ -1,9 +1,11 @@
 import React from 'react'
+import { emoji } from '../util'
 
-const CountrySelect =({countries, onCountrySelected}) => {
+const CountrySelect =({countries, onCountrySelected,}) => {
+
 
     const CountriesOptions = countries.map((countries,index,style) => {
-        return<option value={index} key={index} data-icon={countries.flag}  >{countries.name} <img src={countries.flag}/> </option>
+        return<option value={index} key={index} data-icon={countries.flag}  >{countries.name} {emoji(countries.alpha2Code)}</option>
 
     })
 

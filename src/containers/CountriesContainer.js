@@ -37,11 +37,16 @@ const CountriesContainer = ({countriesApi}) => {
      }
 
 
-     const handleAddFavourite = (event) => {
-        //  console.log(event.target.value)
-         const updatedFavourites = [...favouriteCountries, event.target.value]
+     const handleAddFavourite = () => {
+         const updatedFavourites = [...favouriteCountries, SelectedCountry ]
         setFavouriteCountries(updatedFavourites);
       } 
+
+    //   const handleAddFavourite = (country) => () =>{
+    //     const updatedFavourites = [...favouriteCountries, country ]
+    //     setFavouriteCountries(updatedFavourites);
+
+    //   }
 
 
  
