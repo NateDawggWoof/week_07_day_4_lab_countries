@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
+import { getAllByAltText } from '@testing-library/react';
 import './App.css';
+import CountriesContainer from './containers/CountriesContainer';
 
 function App() {
+
+  const countriesApi = [
+    {
+      name:"All",
+      url: "https://restcountries.eu/rest/v2/all"
+    }
+  ]
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CountriesContainer countriesApi={countriesApi}/>
+
   );
 }
 
